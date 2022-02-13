@@ -1,0 +1,29 @@
+##Create a CSR Request
+
+
+1º Enable SSH and Bash Shell within the appliance web console https:\\FQDN:5480
+2º Connect with Putty and WinSCP to the vCenter (or other tools)
+3º With WinSCP create a subfolder under /CA/
+4º With Putty run “/usr/lib/vmware-vmca/bin/certificate-manager”
+5º Go for option “1” “Replace Machine SSL certificate with custom certificate”
+
+Enter value.
+
+
+###Final steps
+
+
+Upload the Certificate and the Chain to the vCenter Appliance ( in my case the “/CA/” folder
+With Putty run “/usr/lib/vmware-vmca/bin/certificate-manager”
+Go for option “1” “Replace Machine SSL certificate with custom certificate”
+Go for option “2” “Import custom Certificate and key(s) to replace existing machine SSL certificate”
+Specify the location of the certificate
+Specify the location of the key file
+Specify the location of the chain certificate file
+
+
+
+####Check log 
+
+
+VMWare Certificate Authority (VMCA)	VMCA service log is located in--> /var/log/vmware/vmcad/vmcad-syslog.log.
